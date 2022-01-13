@@ -6,11 +6,11 @@ jobs:
 
   CI:
     if: github.ref == 'refs/heads/master'
-    uses: WineServices/${{ github.event.repository.name }}/.github/workflows/reusable-ci.yml@master
+    uses: WineServices/${{ github.event.repository.name }}/.github/workflows/reusable-ci.yml@{{ cookiecutter.default_branch_name }}
 
   CD:
     if: github.ref == 'refs/heads/master'
-    uses: WineServices/${{ github.event.repository.name }}/.github/workflows/reusable-cd.yml@master
+    uses: WineServices/${{ github.event.repository.name }}/.github/workflows/reusable-cd.yml@{{ cookiecutter.default_branch_name }}
 
     with:
       region: "europe-west1"

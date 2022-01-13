@@ -4,5 +4,6 @@
   "github_repo_name": "{{ cookiecutter.project_slug }}",
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
   "python_version": ["3.7", "3.8", "3.9"],
-  "gcp_service_type": ["cloud run", "app engine"]
+  "gcp_service_type": ["cloud run", "app engine"],
+  "default_branch_name": ["main", "master"]
 }
