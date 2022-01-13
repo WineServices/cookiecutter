@@ -1,0 +1,8 @@
+version: '2'
+services:
+
+  {{ cookiecutter.github_repo_name }}:
+    build: .
+    container_name: {{ cookiecutter.github_repo_name }}
+    ports:
+      - "8000:8000"

@@ -1,0 +1,4 @@
+runtime: python{{ cookiecutter.python_version.replace('.', '') }}
+service: {{ cookiecutter.github_repo_name }}
+entrypoint: gunicorn main:app -c api/gunicorn_config.py
+instance_class: F2

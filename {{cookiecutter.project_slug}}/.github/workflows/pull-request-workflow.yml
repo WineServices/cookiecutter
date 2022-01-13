@@ -1,0 +1,10 @@
+name: 3- PR CI
+on:
+  pull_request:
+    branches:
+      - master
+      - feature/*
+
+jobs:
+  CI:
+    uses: WineServices/{{cookiecutter.github_repo_name}}/.github/workflows/reusable-ci.yml@master

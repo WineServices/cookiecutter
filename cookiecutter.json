@@ -1,0 +1,8 @@
+{
+  "project_name": "Wine Services Boilerplate",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "github_repo_name": "{{ cookiecutter.project_slug }}",
+  "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+  "python_version": ["3.7", "3.8", "3.9"],
+  "gcp_service_type": ["cloud run", "app engine"]
+}

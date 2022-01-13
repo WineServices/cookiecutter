@@ -1,0 +1,23 @@
+name: 1. Prod CI/CD
+on: workflow_dispatch
+
+{% raw %}
+jobs:
+
+  CI:
+    if: github.ref == 'refs/heads/master'
+    uses: WineServices/${{ github.event.repository.name }}/.github/workflows/reusable-ci.yml@master
+
+  CD:
+    if: github.ref == 'refs/heads/master'
+    uses: WineServices/${{ github.event.repository.name }}/.github/workflows/reusable-cd.yml@master
+
+    with:
+      region: "europe-west1"
+      resource_name: ${{ github.event.repository.name }}
+      env_name: "prod"
+    secrets:
+      project_id: ${{ secrets.PROD_GCP_PROJECT_ID }}
+      sa_json_key: ${{ secrets.GCP_SA_KEY_JSON }}
+    needs: CI
+{% endraw %}
