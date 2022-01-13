@@ -12,6 +12,4 @@ if __name__ == '__main__':
 
     if '{{ cookiecutter.gcp_service_type }}' == 'cloud run':
         remove_file("src/requirements.txt")
-    else:
-        remove_file("requirements.txt")
         remove_file("src/app.yaml")

@@ -1,4 +1,8 @@
+{% if cookiecutter.gcp_service_type == 'cloud run' %}
 uvicorn==0.16.0
 fastapi==0.70.1
 gunicorn==20.1.0
 requests==2.27.1
+{% else %}
+-r src/requirements.txt
+{% endif %}
