@@ -9,8 +9,9 @@ def remove_file(filepath):
 
 
 if __name__ == '__main__':
-    remove_file("src/app.yaml")
+
     if '{{ cookiecutter.gcp_service_type }}' == 'cloud run':
         remove_file("src/requirements.txt")
     else:
         remove_file("requirements.txt")
+        remove_file("src/app.yaml")
