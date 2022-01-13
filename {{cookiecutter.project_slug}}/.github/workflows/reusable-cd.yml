@@ -19,8 +19,8 @@ on:
         required: true
 
 env:
-  PROJECT_ID: {% raw %}${{ secrets1.project_id }}
-  SA_KEY_JSON: ${{ secrets2.sa_json_key }}{% endraw %}
+  PROJECT_ID: {% raw %}${{ secrets.project_id }}
+  SA_KEY_JSON: ${{ secrets.sa_json_key }}{% endraw %}
 
 jobs:
 

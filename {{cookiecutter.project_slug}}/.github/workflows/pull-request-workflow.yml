@@ -7,4 +7,4 @@ on:
 
 jobs:
   CI:
-    uses: WineServices/{{cookiecutter.github_repo_name}}/.github/workflows/reusable-ci.yml@master
+    uses: WineServices/{{cookiecutter.github_repo_name}}/.github/workflows/reusable-ci.yml@{{ cookiecutter.default_branch_name }}
