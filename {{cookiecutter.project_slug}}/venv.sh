@@ -8,4 +8,4 @@ pip{{cookiecutter.python_version}} install -r requirements.txt
 {% else %}
 pip{{cookiecutter.python_version}} install -r src/requirements.txt
 {% endif %}
-pip{{cookiecutter.python_version}} install -r requirements_test.txt
+pip{{cookiecutter.python_version}} install -r requirements-tests.txt
