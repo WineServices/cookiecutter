@@ -20,4 +20,4 @@ RUN apt-get remove -y gcc &&  apt-get autoremove -y
 
 COPY ./src ./
 
-CMD gunicorn main:app -c api/gunicorn_config.py
+CMD gunicorn main:app -c api/gunicorn_config.py  --timeout 0
