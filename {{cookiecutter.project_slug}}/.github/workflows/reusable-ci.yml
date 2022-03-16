@@ -18,3 +18,9 @@ jobs:
 
       - name: unit tests
         run: tox --recreate
+
+      - name: Upload code coverage
+          uses: codecov/codecov-action@v2
+          with:
+            token: '{{ cookiecutter.codecov_token }}'
+            verbose: true

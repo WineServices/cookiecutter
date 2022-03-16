@@ -2,9 +2,11 @@ name: 3- PR CI
 on:
   pull_request:
     branches:
-      - master
+      - {{ cookiecutter.default_branch_name }}
       - feature/*
-
+  push:
+    branches:
+      - {{ cookiecutter.default_branch_name }}
 jobs:
   CI:
     uses: WineServices/{{cookiecutter.github_repo_name}}/.github/workflows/reusable-ci.yml@{{ cookiecutter.default_branch_name }}
